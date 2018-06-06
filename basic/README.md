@@ -8,6 +8,7 @@ constant.html  php常量
 arth.html      php运算符
 flow_cont.html php流程控制
 string.html    php字符串
+func.html      php函数
 
 time.html      php时间处理
 error.html     php错误处理

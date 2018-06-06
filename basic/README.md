@@ -7,3 +7,4 @@ arth.html      php运算符
 time.html      php时间处理
 
 up_down        php文件上传及下载
+file           php文件处理

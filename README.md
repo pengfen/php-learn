@@ -9,7 +9,7 @@ git push -u origin master
 
 basic php基础()
 basic      php 基础 (错误    gd 库    操作文件    上传文件    操作数据库 mysql    session cookie)
-ext        php 扩展 (redis rabbitmq swoole)
+ext        php 扩展 (redis rabbitmq pthreads swoole)
 frame      php框架包
 curl       php 调用第三方接口
 app        php 开发 APP

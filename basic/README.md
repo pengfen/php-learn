@@ -13,3 +13,4 @@ file           php文件处理
 mysql          php操作mysql库
 session        php session
 cookie         php cookie
+pattern        php正则

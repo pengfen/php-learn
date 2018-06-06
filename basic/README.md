@@ -9,3 +9,4 @@ string.html    php字符串
 
 up_down        php文件上传及下载
 file           php文件处理
+mysql          php操作mysql库

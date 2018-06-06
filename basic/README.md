@@ -2,8 +2,8 @@ syntax.html    php基础语法
 
 basic.html     php基础
 vari.html      php变量
-constant.html  php常量
 type.html      php数据类型
+constant.html  php常量
 arth.html      php运算符
 time.html      php时间处理
 string.html    php字符串

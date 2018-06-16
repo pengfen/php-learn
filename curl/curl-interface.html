@@ -8,6 +8,9 @@ $data = $this->upload($url, array('text/plain'));
  *
  * $url 上传接口地址
  * $allowType 上传文件类型
+ * txt 文件类型 text/plain
+ * excel 文件类型 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel
+ * 图片文件类型 'image/png', 'image/gif', 'image/jpeg'
 */
 function upload($url, $allowType) {
 	$result = array('code' => 0, 'message' => 'ok'); // 默认返回数据

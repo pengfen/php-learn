@@ -20,5 +20,7 @@ yii-form.html    Yii 表单
 yii-ajax.html    Yii ajax 请求
 yii-chat.html    Yii ajax 长轮询
 
+yii-log.html     Yii日志
+
 
 https://www.shiyanlou.com/courses/410

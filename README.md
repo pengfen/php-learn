@@ -17,6 +17,8 @@ secret     php 加密
 php7       php7 新特性
 interview  面试
 
+other      其他
+
 [shop](https://github.com/pengfen/shop)       php 学习时第一个项目
 [blog](https://github.com/pengfen/blog)       php 学习时第二个项目
 [resource](https://github.com/pengfen/resource)   学习资料整理

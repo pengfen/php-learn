@@ -4,3 +4,5 @@
 |--  login.php		登录的表单
 |--  dologin.php	执行登陆
 |--  logout			退出等赌
+
+use.html cookie的使用(js中保存 php取出)

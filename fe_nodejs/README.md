@@ -1,11 +1,14 @@
-1. 更新npm
+update.html  npm更新
+install.html npm安装
 
-npm i -g npm to update
-npm -v
 
-2. 更新node
+first.html     node第一个程序
+my-conn.html   连接mysql
+my-query.html  mysql查询
+my-add.html    mysql添加
 
-npm cache clean -f
-npm install -g n #安装n模块
-bin/n 9.0.0
-node -v
+first.html
+my-add.html   nodejs操作数据库
+my-conn.html
+my-query.html
+

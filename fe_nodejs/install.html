@@ -24,3 +24,13 @@ nodejs start listen 8899 port!
 linux安装nodejs
 1.下载nodejs
 https://nodejs.org/en/download/
+
+2. 解压
+tar -xvf node-v8... -C ~/app/
+
+3. 使用软链接生成命令
+sudo ln -s /home/ricky/app/node-v8.../bin/node /usr/bin/node
+sudo ln -s /home/ricky/app/node-v8.../bin/npm /usr/bin/npm
+
+node -v
+npm -v

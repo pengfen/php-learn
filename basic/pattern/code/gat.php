@@ -1,6 +1,6 @@
 <?php
 /**
-  * 采集数据 
+  * 采集数据 (php爬取数据)
   * php gather.php
 */
     ini_set('memory_limit', '500M');
@@ -74,18 +74,18 @@
         }
         $num++;
     }
-    {
-        foreach ($cookieR2 as $k1 => $v1) {
-            setcookie($k1,$v1,time()+3600*24*365,'./cookie.txt','pp.d1jd.com');
-        }
+    
+    foreach ($cookieR2 as $k1 => $v1) { // 设置cookie
+        setcookie($k1,$v1,time()+3600*24*365,'./cookie.txt','pp.d1jd.com');
     }
-
+    
     // 获取时间
     $fromdate = getTime($filename); // 起始时间 如果数据库没有 使用当天凌晨时间 有使用数据库中数据
     $starttime = date('Y-m-d H:i:s', time());
     file_put_contents($log, "开始时间: {$starttime} ".PHP_EOL, FILE_APPEND);
     $todate = date('Y-m-d H:i:s', time());
     $conf = file_get_contents($filename);
+    // 'starttime'=>'2016-06-22 18:29:26'
     preg_match('/starttime\'=>\'([-: 0-9]+)/i', $conf, $matches);
     //preg_match('/starttime\'=>\'([0-9]+)/i', $conf, $matches);
     if (isset($matches[1])) {

@@ -10,3 +10,12 @@ var_dump($match); // [0 => "BBC"] 如果没有[]
 if (preg_match($p, $str)) {
 	echo '匹配成功';
 }
+
+
+// 匹配苹果
+$p = '/苹果/';
+
+$str = "我喜欢吃苹果";
+if (preg_match($p, $str)) {
+	echo '匹配成功';
+}

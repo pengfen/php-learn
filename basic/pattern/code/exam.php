@@ -7,7 +7,7 @@ $user = array(
 
 // 进行一般性验证
 if (empty($user)) {
-	dir('用户信息不能为空');
+	die('用户信息不能为空');
 }
 if (strlen($user['name']) < 6) {
 	die('用户名长度最少为6位');
@@ -22,7 +22,7 @@ if (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $user['email'])) {
 }
 // 手机号必须为11位数字 且为1开头
 if (!preg_match('/^1\d{10}$/i', $user['mobile'])) {
-	dir('手机号不合法');
+	die('手机号不合法');
 }
 
 echo '用户信息验证成功';

@@ -6,3 +6,5 @@ pattern-patt.html    使用正则表达式进行匹配
 pattern-result.html  查找所有匹配结果
 pattern-replace.html 正则表达式的搜索和替换
 pattern-exam.html    正则匹配常用案例
+
+code 案例代码

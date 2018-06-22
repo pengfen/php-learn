@@ -102,20 +102,6 @@ foreach ($cookie as $key => $value) {
     }
     $num++;
 }
-var_dump($cookieR2);
-
-
-
-
-
- //header('Location:'.$strSEnd);
- //
- //
- //
- 
-
-
-
 
 Class HTTPClient{
     private $_loginURL = 'http://pp.d1jd.com/member/login.php';
@@ -174,77 +160,69 @@ Class HTTPClient{
      
     const HTTP_REQUEST_GET = CURLOPT_HTTPGET;
     const HTTP_REQUEST_POST = CURLOPT_POST;
-  }
-
-
-
-
-
+}
 
 function getAllCookie(){
-$post_data = array();
-$post_data['username'] = "e002041";
-$post_data['password'] = "";
-$post_data['forward'] = "/";
-$post_data['submit'] = "submit";
+    $post_data = array();
+    $post_data['username'] = "e002041";
+    $post_data['password'] = "";
+    $post_data['forward'] = "/";
+    $post_data['submit'] = "submit";
 
-$url='http://pp.d1jd.com/member/login.php';
-$o="";
-foreach ($post_data as $k=>$v)
-{
-    $o.= "$k=".urlencode($v)."&";
-}
-$post_data=substr($o,0,-1);
+    $url='http://pp.d1jd.com/member/login.php';
+    $o="";
+    foreach ($post_data as $k=>$v)
+    {
+        $o.= "$k=".urlencode($v)."&";
+    }
+    $post_data=substr($o,0,-1);
 
-$referer='http://pp.d1jd.com/member/login.php';
-$header = array('Location'=>'http://pp.d1jd.com/member/my.php?mid=21&status=3');
+    $referer='http://pp.d1jd.com/member/login.php';
+    $header = array('Location'=>'http://pp.d1jd.com/member/my.php?mid=21&status=3');
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_POST, 1);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_POST, 1);
 
-//伪造来源referer
-curl_setopt ($ch,CURLOPT_REFERER,$referer);
+    //伪造来源referer
+    curl_setopt ($ch,CURLOPT_REFERER,$referer);
 
-curl_setopt($ch, CURLOPT_HEADER, $header);
-curl_setopt($ch, CURLOPT_URL,$url);
-//为了支持cookie
-curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
-curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+    curl_setopt($ch, CURLOPT_HEADER, $header);
+    curl_setopt($ch, CURLOPT_URL,$url);
+    //为了支持cookie
+    curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 
 
-// CURLOPT_FOLLOWLOCATION = 'http://pp.d1jd.com/member/my.php?mid=21&status=3';
-// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-ob_start();
-curl_exec($ch);
-$con = ob_get_contents();
-ob_clean();
+    // CURLOPT_FOLLOWLOCATION = 'http://pp.d1jd.com/member/my.php?mid=21&status=3';
+    // curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    ob_start();
+    curl_exec($ch);
+    $con = ob_get_contents();
+    ob_clean();
 
-// var_dump($result);
-return $con;
+    // var_dump($result);
+    return $con;
 }
 
 
 function writeCookie()
 {
-  $ch =curl_init();  
-curl_setopt($ch,CURLOPT_URL,'http://pp.d1jd.com/member/my.php?mid=21&status=3');  
-  
-$header = array();  
-//curl_setopt($ch,CURLOPT_POST,true);  
-//curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);  
-curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);  
-curl_setopt($ch,CURLOPT_HEADER,true);  
-curl_setopt($ch,CURLOPT_HTTPHEADER,$header);  
-curl_setopt($ch,CURLOPT_COOKIE,'B=115.100.62.7.1401937092035530; bdshare_firstime=1401937092199; __myutma=122328856.1548793539.1401937093.1408503164.1408694138.69;');  
-  
-  
-$content = curl_exec($ch);  
-  
-echo "<pre>";print_r(curl_error($ch));echo "</pre>";  
-echo "<pre>";print_r(curl_getinfo($ch));echo "</pre>";  
-echo "<pre>";print_r($header);echo "</pre>";  
-echo "</br>",$content;  
+    $ch =curl_init();  
+    curl_setopt($ch,CURLOPT_URL,'http://pp.d1jd.com/member/my.php?mid=21&status=3');  
+      
+    $header = array();  
+    //curl_setopt($ch,CURLOPT_POST,true);  
+    //curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);  
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);  
+    curl_setopt($ch,CURLOPT_HEADER,true);  
+    curl_setopt($ch,CURLOPT_HTTPHEADER,$header);  
+    curl_setopt($ch,CURLOPT_COOKIE,'B=115.100.62.7.1401937092035530; bdshare_firstime=1401937092199; __myutma=122328856.1548793539.1401937093.1408503164.1408694138.69;');  
+      
+      
+    $content = curl_exec($ch);  
+      
+    echo "<pre>";print_r(curl_error($ch));echo "</pre>";  
+    echo "<pre>";print_r(curl_getinfo($ch));echo "</pre>";  
+    echo "<pre>";print_r($header);echo "</pre>";  
+    echo "</br>",$content;  
 }
-
-
-?>

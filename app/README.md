@@ -11,3 +11,5 @@ app-memcache.html memcache 缓存
 注意 Array -- json_encode() --> JSON (注意编码是UTF-8 否则转换失败)
 
 cate.html (分类接口 --- 基于wordpress)
+
+careful.html
